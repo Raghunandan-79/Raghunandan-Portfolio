@@ -52,6 +52,7 @@ const Hero = () => {
       {/* GSAP Purple Glowing Mouse Follower */}
       <div 
         ref={glowRef}
+        className="mouse-glow"
         style={{
           position: 'fixed',
           top: 0,
@@ -67,7 +68,7 @@ const Hero = () => {
 
       <div className="grid" style={{ alignItems: 'center', position: 'relative', zIndex: 1 }}>
         <div>
-          <h1 className="gsap-reveal" style={{ fontSize: '4rem', marginBottom: '1rem', lineHeight: '1.1' }}>
+          <h1 className="gsap-reveal" style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', marginBottom: '1rem', lineHeight: '1.1' }}>
             {personalInfo.name.toUpperCase()}
           </h1>
           <h2 className="gsap-reveal" style={{ fontSize: '1.5rem', color: '#a0a0a0', marginBottom: '2rem', fontWeight: 400 }}>
@@ -86,7 +87,7 @@ const Hero = () => {
         
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           {/* Avatar Image */}
-          <div className="gsap-float" style={{ position: 'relative', width: '350px', height: '350px' }}>
+          <div className="gsap-float" style={{ position: 'relative', width: '100%', maxWidth: '350px', aspectRatio: '1 / 1' }}>
             {/* Using a pseudo-element like border for styling instead of rounded corners */}
             <div style={{ 
               position: 'absolute', 
