@@ -77,7 +77,7 @@ const Skills = () => {
       flexDirection: 'column',
       background: 'radial-gradient(circle at top, #1a0b2e 0%, #0a0a0a 60%)',
       position: 'relative',
-      overflow: 'hidden'
+      paddingBottom: '100px'
     }}>
       {/* Background glowing orbs */}
       <div style={{
