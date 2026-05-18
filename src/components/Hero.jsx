@@ -76,8 +76,11 @@ const Hero = () => {
           <p className="gsap-reveal" style={{ maxWidth: '600px', marginBottom: '2rem', color: '#ccc' }}>
             DevOps Engineer with experience in cybersecurity, container orchestration, CI/CD, and cloud infrastructure. Passionate about building robust, secure, and scalable systems.
           </p>
-          <div className="gsap-reveal">
+          <div className="gsap-reveal" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
             <a href="#contact" className="btn">Get In Touch</a>
+            <a href="https://drive.google.com/file/d/1Nj26KtY3wOsCBRGjlniMNW9xLrornPgy/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#fff', color: '#000' }}>
+              View Resume
+            </a>
           </div>
         </div>
         

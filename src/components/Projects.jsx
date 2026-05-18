@@ -31,7 +31,7 @@ const Projects = () => {
                 <li key={i}>{point}</li>
               ))}
             </ul>
-            <a href={project.link} className="btn" style={{ marginTop: '20px', fontSize: '0.8rem', padding: '10px 20px' }}>
+            <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn" style={{ marginTop: '20px', fontSize: '0.8rem', padding: '10px 20px' }}>
               View Project
             </a>
           </motion.div>
