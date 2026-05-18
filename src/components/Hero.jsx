@@ -87,14 +87,14 @@ const Hero = () => {
         
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           {/* Avatar Image */}
-          <div className="gsap-float" style={{ position: 'relative', width: '100%', maxWidth: '350px', aspectRatio: '1 / 1' }}>
-            {/* Using a pseudo-element like border for styling instead of rounded corners */}
+          <div className="gsap-float" style={{ position: 'relative', width: '100%', maxWidth: '300px', aspectRatio: '1 / 1' }}>
             <div style={{ 
               position: 'absolute', 
-              top: '20px', left: '20px', 
+              top: '15px', left: '15px', 
               width: '100%', height: '100%', 
-              border: '2px solid #fff',
-              zIndex: 0
+              border: '2px solid rgba(255,255,255,0.5)',
+              zIndex: 0,
+              pointerEvents: 'none'
             }}></div>
             <img 
               src="/avatar.png" 

@@ -37,8 +37,8 @@ const SkillCard = ({ name }) => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        width: 'clamp(65px, 15vw, 90px)',
-        height: 'clamp(65px, 15vw, 90px)',
+        width: 'clamp(45px, 12vw, 90px)',
+        height: 'clamp(45px, 12vw, 90px)',
         background: 'rgba(255, 255, 255, 0.03)',
         border: '1px solid rgba(255, 255, 255, 0.1)',
         backdropFilter: 'blur(10px)',
@@ -46,8 +46,8 @@ const SkillCard = ({ name }) => {
         transition: 'border-color 0.3s ease'
       }}
     >
-      <i className={iconClass} style={{ fontSize: '2.5rem', marginBottom: '8px', color: '#e9d5ff' }}></i>
-      <span style={{ fontSize: '0.65rem', color: '#ccc', textAlign: 'center' }}>{name}</span>
+      <i className={iconClass} style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', marginBottom: '8px', color: '#e9d5ff' }}></i>
+      <span style={{ fontSize: 'clamp(0.45rem, 1.5vw, 0.65rem)', color: '#ccc', textAlign: 'center' }}>{name}</span>
     </motion.div>
   );
 };
@@ -130,7 +130,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: rowIndex * 0.1 }}
-            style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}
+            style={{ display: 'flex', gap: 'clamp(5px, 2vw, 15px)', justifyContent: 'center', flexWrap: 'nowrap' }}
           >
             {rowSkills.map((skillName, index) => (
               <SkillCard key={index} name={skillName} />
