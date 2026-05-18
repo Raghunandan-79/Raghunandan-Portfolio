@@ -45,7 +45,7 @@ const Navbar = () => {
         }}
       >
         <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#fff', letterSpacing: '2px' }}>
-          <img style={{width: '50px', height: '50px'}} src="./public/avatar.png" alt="Avatar" />
+          RS.
         </div>
         
         {/* Desktop Links */}
