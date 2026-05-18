@@ -18,6 +18,7 @@ export const skills = [
   { category: "Containers and Orchestration", items: "Docker, Kubernetes" },
   { category: "Cloud", items: "AWS" },
   { category: "Infrastructure as Code (IaC)", items: "Terraform" },
+  { category: "Configuration Management", items: "Ansible" },
   { category: "CI/CD", items: "GitLab CI/CD, Jenkins" },
   { category: "Monitoring and Observability", items: "Prometheus, Grafana" },
   { category: "Automation", items: "Bash Scripting, Python" },

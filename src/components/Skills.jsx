@@ -6,6 +6,7 @@ const iconMapping = {
   "Docker": "devicon-docker-plain",
   "Kubernetes": "devicon-kubernetes-plain",
   "Docker Compose": "devicon-docker-plain",
+  "Ansible": "devicon-ansible-plain",
   "AWS": "devicon-amazonwebservices-plain-wordmark",
   "Terraform": "devicon-terraform-plain",
   "GitLab CI/CD": "devicon-gitlab-plain",
