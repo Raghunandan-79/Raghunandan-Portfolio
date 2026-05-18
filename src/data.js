@@ -30,7 +30,7 @@ export const projects = [
   {
     title: "Notes App CI/CD Pipeline",
     tech: "Docker, GitLab CI/CD, Jenkins, NGINX",
-    link: "#",
+    link: "https://github.com/Raghunandan-79/notes-app",
     points: [
       "Containerized a full-stack Notes Application using Docker and multi-service configurations with Docker Compose.",
       "Implemented CI/CD pipelines using GitLab CI/CD for automated build and deployment workflows.",
@@ -42,7 +42,7 @@ export const projects = [
   {
     title: "Chat Application on Kubernetes",
     tech: "Kubernetes, Docker, MongoDB, NGINX Ingress",
-    link: "#",
+    link: "https://github.com/Raghunandan-79/Chat-App",
     points: [
       "Deployed a containerized MERN chat application on Kubernetes using Deployments, Services, and Ingress.",
       "Implemented persistent MongoDB storage using Persistent Volumes (PV) and Persistent Volume Claims (PVC).",
@@ -53,7 +53,7 @@ export const projects = [
   {
     title: "Kubernetes Runtime Threat Detection System",
     tech: "Kubernetes, Falco, eBPF, Helm, kind",
-    link: "#",
+    link: "https://github.com/Raghunandan-79/kubernetes-runtime-threat-detection",
     points: [
       "Built a real-time Kubernetes runtime threat detection system using Falco deployed as a DaemonSet inside a kind Kubernetes cluster.",
       "Configured Falco with the modern_bpf eBPF driver for syscall-level runtime monitoring and container security analysis.",
