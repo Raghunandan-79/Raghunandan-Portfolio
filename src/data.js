@@ -15,7 +15,7 @@ export const education = {
 };
 
 export const skills = [
-  { category: "Containers and Orchestration", items: "Docker, Kubernetes, Docker Compose" },
+  { category: "Containers and Orchestration", items: "Docker, Kubernetes" },
   { category: "Cloud", items: "AWS" },
   { category: "Infrastructure as Code (IaC)", items: "Terraform" },
   { category: "CI/CD", items: "GitLab CI/CD, Jenkins" },
