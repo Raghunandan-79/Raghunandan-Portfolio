@@ -1,12 +1,12 @@
-stages:
-  - build
-  - test
-  - push
-
 image: docker:latest
 
 services:
   - docker:dind
+
+stages:
+  - build
+  - test
+  - push
 
 variables:
   DOCKER_TLS_CERTDIR: "/certs"
@@ -25,5 +25,6 @@ push_job:
   stage: push
   script:
     - echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USER" --password-stdin
+    - docker build -t notes-app:latest .
     - docker tag notes-app:latest $DOCKERHUB_USER/portfolio-website:latest
     - docker push $DOCKERHUB_USER/portfolio-website:latest
