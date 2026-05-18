@@ -153,3 +153,9 @@ section {
   background: #fff;
   color: #000;
 }
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+}
