@@ -65,7 +65,7 @@ const Hero = () => {
             {personalInfo.title.toUpperCase()}
           </h2>
           <p className="gsap-reveal max-w-150 mb-8 text-[#ccc]">
-            Full Stack Developer with a strong focus on backend engineering and DevOps, building scalable APIs, secure cloud infrastructure, container orchestration, and CI/CD pipelines. Comfortable across the stack, with solid frontend development experience to deliver complete, end-to-end products.
+            Software Engineer with a strong focus on backend engineering and DevOps, building scalable APIs, secure cloud infrastructure, container orchestration, and CI/CD pipelines. Comfortable across the stack, with solid frontend development experience to deliver complete, end-to-end products.
           </p>
           <div className="gsap-reveal flex gap-3.75 flex-wrap">
             <a href="#contact" className="btn">Get In Touch</a>
