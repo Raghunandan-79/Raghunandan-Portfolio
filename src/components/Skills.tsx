@@ -80,7 +80,7 @@ const Skills = () => {
   const row2 = useMemo(() => allSkills.slice(Math.ceil(allSkills.length / 2)), [allSkills]);
 
   return (
-    <section id="skills" className="min-h-screen flex flex-col relative pb-[100px] justify-center bg-[radial-gradient(circle_at_top,#1a0b2e_0%,#0a0a0a_60%)]">
+    <section id="skills" className="relative pb-[100px] bg-[radial-gradient(circle_at_top,#1a0b2e_0%,#0a0a0a_60%)]">
       {/* Background glowing orbs */}
       <div className="absolute top-[20%] left-[10%] w-[100px] h-[100px] bg-[#a855f7] blur-[80px] rounded-full z-0" />
       <div className="absolute bottom-[20%] right-[10%] w-[150px] h-[150px] bg-[#c084fc] blur-[100px] rounded-full z-0" />

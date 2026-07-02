@@ -4,7 +4,7 @@ import { achievements } from '../data';
 
 const Achievements = () => {
   return (
-    <section id="achievements" className="min-h-fit justify-start">
+    <section id="achievements">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

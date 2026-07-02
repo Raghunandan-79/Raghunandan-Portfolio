@@ -46,7 +46,7 @@ const Projects = () => {
                   href={project.liveLink} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="btn bg-white text-black hover:bg-transparent hover:text-white text-[0.8rem] py-2.5 px-5 !mt-0"
+                  className="btn btn-primary text-[0.8rem] py-2.5 px-5 !mt-0"
                 >
                   Live Link
                 </a>

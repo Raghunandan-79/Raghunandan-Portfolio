@@ -49,7 +49,7 @@ const Hero = () => {
   }, { scope: container });
 
   return (
-    <section id="hero" ref={container} className="relative">
+    <section id="hero" ref={container} className="relative min-h-screen justify-center">
       {/* GSAP Purple Glowing Mouse Follower */}
       <div 
         ref={glowRef}
@@ -73,7 +73,7 @@ const Hero = () => {
               href="https://drive.google.com/file/d/1Nj26KtY3wOsCBRGjlniMNW9xLrornPgy/view?usp=sharing" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="btn bg-white text-black hover:bg-transparent hover:text-white"
+              className="btn btn-primary"
             >
               View Resume
             </a>
