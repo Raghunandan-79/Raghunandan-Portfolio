@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Raghunandan Sharma",
-  title: "Full Stack Developer | Backend & DevOps",
+  title: "Software Engineer | Backend & DevOps",
   phone: "+91 6006794166",
   email: "raghunandansharma1905@gmail.com",
   linkedin: "https://linkedin.com/in/raghunandan79",
