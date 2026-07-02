@@ -19,7 +19,7 @@ import { personalInfo } from '../data';
 
 const Contact = () => {
   return (
-    <section id="contact" style={{ borderBottom: 'none', minHeight: '60vh' }}>
+    <section id="contact" className="border-b-0 min-h-[60vh]">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -29,27 +29,45 @@ const Contact = () => {
         <h2 className="title">Contact</h2>
         <p className="subtitle">Let's connect and build something secure and scalable.</p>
         
-        <div className="contact-links">
-          <a href={`mailto:${personalInfo.email}`} target="_blank" rel="noopener noreferrer">
+        <div className="flex flex-wrap gap-5 mt-5">
+          <a 
+            href={`mailto:${personalInfo.email}`} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2.5 py-2.5 px-5 border border-white/20 hover:bg-white hover:text-black transition-all duration-300 ease-in-out"
+          >
             <Mail size={20} />
             <span>Email</span>
           </a>
-          <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer">
+          <a 
+            href={personalInfo.linkedin} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2.5 py-2.5 px-5 border border-white/20 hover:bg-white hover:text-black transition-all duration-300 ease-in-out"
+          >
             <LinkedinIcon />
             <span>LinkedIn</span>
           </a>
-          <a href={personalInfo.github} target="_blank" rel="noopener noreferrer">
+          <a 
+            href={personalInfo.github} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2.5 py-2.5 px-5 border border-white/20 hover:bg-white hover:text-black transition-all duration-300 ease-in-out"
+          >
             <GithubIcon />
             <span>GitHub</span>
           </a>
-          <a href={`tel:${personalInfo.phone}`}>
+          <a 
+            href={`tel:${personalInfo.phone}`}
+            className="flex items-center gap-2.5 py-2.5 px-5 border border-white/20 hover:bg-white hover:text-black transition-all duration-300 ease-in-out"
+          >
             <Phone size={20} />
             <span>{personalInfo.phone}</span>
           </a>
         </div>
       </motion.div>
       
-      <div style={{ marginTop: '100px', textAlign: 'center', color: '#555', fontSize: '0.9rem' }}>
+      <div className="mt-[100px] text-center text-[#555] text-[0.9rem]">
         &copy; {new Date().getFullYear()} {personalInfo.name}. All rights reserved. Built with React & Three.js.
       </div>
     </section>

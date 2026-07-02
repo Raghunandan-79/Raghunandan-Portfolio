@@ -15,21 +15,20 @@ const Education = () => {
       </motion.div>
       
       <motion.div 
-        className="card"
+        className="card max-w-[800px]"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        style={{ maxWidth: '800px' }}
       >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: '15px' }}>
+        <div className="flex justify-between items-start flex-wrap mb-4">
           <div>
-            <h3>{education.institution}</h3>
-            <h4 style={{ color: '#fff', fontWeight: 600 }}>{education.degree}</h4>
+            <h3 className="text-2xl mb-2.5 text-white">{education.institution}</h3>
+            <h4 className="text-white font-semibold">{education.degree}</h4>
           </div>
-          <div style={{ textAlign: 'right' }}>
-            <p style={{ color: '#aaa', fontSize: '0.9rem' }}>{education.period}</p>
-            <p style={{ color: '#aaa', fontSize: '0.9rem', marginTop: '5px' }}>CGPA: {education.cgpa}</p>
+          <div className="text-right">
+            <p className="text-[#aaa] text-[0.9rem]">{education.period}</p>
+            <p className="text-[#aaa] text-[0.9rem] mt-1.5">CGPA: {education.cgpa}</p>
           </div>
         </div>
       </motion.div>

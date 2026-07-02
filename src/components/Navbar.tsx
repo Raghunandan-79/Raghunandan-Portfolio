@@ -28,42 +28,23 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100%',
-          padding: scrolled ? '15px 5%' : '25px 5%',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          background: scrolled ? 'rgba(10, 10, 10, 0.8)' : 'transparent',
-          backdropFilter: scrolled ? 'blur(10px)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
-          zIndex: 1000,
-          transition: 'all 0.3s ease',
-        }}
+        className={`fixed top-0 left-0 w-full flex justify-between items-center transition-all duration-300 ease-in-out z-[1000] ${
+          scrolled
+            ? 'py-3.5 px-[5%] bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/10'
+            : 'py-6 px-[5%] bg-transparent backdrop-blur-none border-b-0'
+        }`}
       >
-        <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#fff', letterSpacing: '2px' }}>
+        <div className="text-2xl font-extrabold text-white tracking-[2px]">
           RS.
         </div>
         
         {/* Desktop Links */}
-        <div style={{ display: 'flex', gap: '30px' }} className="nav-links">
+        <div className="hidden md:flex gap-[30px]">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              style={{
-                color: '#ccc',
-                fontSize: '0.9rem',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                letterSpacing: '1px',
-                transition: 'color 0.3s ease'
-              }}
-              onMouseOver={(e) => e.currentTarget.style.color = '#fff'}
-              onMouseOut={(e) => e.currentTarget.style.color = '#ccc'}
+              className="text-[#ccc] hover:text-white text-[0.9rem] font-semibold uppercase tracking-[1px] transition-colors duration-300 ease-in-out"
             >
               {link.name}
             </a>
@@ -72,9 +53,8 @@ const Navbar = () => {
 
         {/* Mobile Hamburger Menu Icon */}
         <div 
-          className="mobile-menu-btn" 
+          className="md:hidden block cursor-pointer z-[1001]" 
           onClick={() => setIsOpen(true)}
-          style={{ cursor: 'pointer', zIndex: 1001 }}
         >
           <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="square">
             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -92,30 +72,12 @@ const Navbar = () => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            style={{
-              position: 'fixed',
-              top: 0,
-              right: 0,
-              width: '100%',
-              height: '100vh',
-              background: '#0a0a0a',
-              zIndex: 1002,
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              borderLeft: '1px solid rgba(255,255,255,0.1)'
-            }}
+            className="fixed top-0 right-0 w-full h-screen bg-[#0a0a0a] z-[1002] flex flex-col justify-center items-center border-l border-white/10"
           >
             {/* Close Button */}
             <div 
               onClick={() => setIsOpen(false)}
-              style={{
-                position: 'absolute',
-                top: '25px',
-                right: '5%',
-                cursor: 'pointer'
-              }}
+              className="absolute top-[25px] right-[5%] cursor-pointer"
             >
               <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="square">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -124,19 +86,13 @@ const Navbar = () => {
             </div>
 
             {/* Sidebar Links */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', textAlign: 'center' }}>
+            <div className="flex flex-col gap-10 text-center">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  style={{
-                    color: '#fff',
-                    fontSize: '1.5rem',
-                    fontWeight: 600,
-                    textTransform: 'uppercase',
-                    letterSpacing: '2px',
-                  }}
+                  className="text-white hover:text-purple-400 text-2xl font-semibold uppercase tracking-[2px] transition-colors duration-300"
                 >
                   {link.name}
                 </a>

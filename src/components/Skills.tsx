@@ -35,23 +35,10 @@ const SkillCard = ({ name }: { name: string }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.05, borderColor: '#a855f7' }}
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: 'clamp(80px, 12vw, 110px)',
-        height: 'clamp(80px, 12vw, 110px)',
-        background: 'rgba(255, 255, 255, 0.03)',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        backdropFilter: 'blur(10px)',
-        cursor: 'pointer',
-        transition: 'border-color 0.3s ease',
-        flexShrink: 0
-      }}
+      className="flex flex-col items-center justify-center w-[clamp(80px,12vw,110px)] h-[clamp(80px,12vw,110px)] bg-white/[0.03] border border-white/10 backdrop-blur-[10px] cursor-pointer transition-colors duration-300 shrink-0"
     >
-      <i className={iconClass} style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', marginBottom: '8px', color: '#e9d5ff' }}></i>
-      <span style={{ fontSize: 'clamp(0.55rem, 1.5vw, 0.75rem)', color: '#ccc', textAlign: 'center', fontWeight: 500 }}>{name}</span>
+      <i className={`${iconClass} text-[clamp(1.8rem,4vw,2.8rem)] mb-2 text-[#e9d5ff]`}></i>
+      <span className="text-[clamp(0.55rem,1.5vw,0.75rem)] text-[#ccc] text-center font-medium">{name}</span>
     </motion.div>
   );
 };
@@ -61,20 +48,9 @@ const MarqueeRow = ({ items, speed = 25 }: { items: string[]; speed?: number }) 
   const duplicatedItems = [...items, ...items];
 
   return (
-    <div style={{
-      overflow: 'hidden',
-      display: 'flex',
-      width: '100%',
-      maskImage: 'linear-gradient(to right, transparent, white 15%, white 85%, transparent)',
-      WebkitMaskImage: 'linear-gradient(to right, transparent, white 15%, white 85%, transparent)',
-      padding: '10px 0'
-    }}>
+    <div className="overflow-hidden flex w-full py-2.5 [mask-image:linear-gradient(to_right,transparent,white_15%,white_85%,transparent)] [webkit-mask-image:linear-gradient(to_right,transparent,white_15%,white_85%,transparent)]">
       <motion.div
-        style={{
-          display: 'flex',
-          gap: '20px',
-          flexShrink: 0
-        }}
+        className="flex gap-5 shrink-0"
         animate={{
           x: [0, "-50%"]
         }}
@@ -104,61 +80,24 @@ const Skills = () => {
   const row2 = useMemo(() => allSkills.slice(Math.ceil(allSkills.length / 2)), [allSkills]);
 
   return (
-    <section id="skills" style={{ 
-      minHeight: '100vh', 
-      display: 'flex', 
-      flexDirection: 'column',
-      background: 'radial-gradient(circle at top, #1a0b2e 0%, #0a0a0a 60%)',
-      position: 'relative',
-      paddingBottom: '100px',
-      justifyContent: 'center'
-    }}>
+    <section id="skills" className="min-h-screen flex flex-col relative pb-[100px] justify-center bg-[radial-gradient(circle_at_top,#1a0b2e_0%,#0a0a0a_60%)]">
       {/* Background glowing orbs */}
-      <div style={{
-        position: 'absolute',
-        top: '20%',
-        left: '10%',
-        width: '100px',
-        height: '100px',
-        background: '#a855f7',
-        filter: 'blur(80px)',
-        borderRadius: '50%',
-        zIndex: 0
-      }} />
-      <div style={{
-        position: 'absolute',
-        bottom: '20%',
-        right: '10%',
-        width: '150px',
-        height: '150px',
-        background: '#c084fc',
-        filter: 'blur(100px)',
-        borderRadius: '50%',
-        zIndex: 0
-      }} />
+      <div className="absolute top-[20%] left-[10%] w-[100px] h-[100px] bg-[#a855f7] blur-[80px] rounded-full z-0" />
+      <div className="absolute bottom-[20%] right-[10%] w-[150px] h-[150px] bg-[#c084fc] blur-[100px] rounded-full z-0" />
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        style={{ textAlign: 'center', marginBottom: '60px', zIndex: 1 }}
+        className="text-center mb-[60px] z-10"
       >
-        <h2 className="title" style={{ borderLeft: 'none', paddingLeft: 0, fontSize: '3.5rem', color: '#fff', textShadow: '0 0 20px rgba(168, 85, 247, 0.5)' }}>
+        <h2 className="title border-l-0 pl-0 text-[3.5rem] text-white [text-shadow:0_0_20px_rgba(168,85,247,0.5)]">
           TECH STACK
         </h2>
       </motion.div>
       
-      <div style={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        alignItems: 'center',
-        gap: '20px',
-        zIndex: 1,
-        width: '100%',
-        maxWidth: '100%',
-        overflow: 'hidden'
-      }}>
+      <div className="flex flex-col items-center gap-5 z-10 w-full max-w-full overflow-hidden">
         {/* Row 1 (scrolling leftwards at speed 30s) */}
         <MarqueeRow items={row1} speed={30} />
         
