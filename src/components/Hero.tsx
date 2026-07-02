@@ -1,5 +1,4 @@
-import React, { useRef } from 'react';
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
 import { personalInfo } from '../data';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
