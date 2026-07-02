@@ -30,8 +30,8 @@ const Navbar = () => {
         transition={{ duration: 0.5 }}
         className={`fixed top-0 left-0 w-full flex justify-between items-center transition-all duration-300 ease-in-out z-[1000] ${
           scrolled
-            ? 'py-3.5 px-[5%] bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/10'
-            : 'py-6 px-[5%] bg-transparent backdrop-blur-none border-b-0'
+            ? 'py-5 px-[5%] bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/10'
+            : 'py-8 px-[5%] bg-transparent backdrop-blur-none border-b-0'
         }`}
       >
         <div className="text-2xl font-extrabold text-white tracking-[2px]">
