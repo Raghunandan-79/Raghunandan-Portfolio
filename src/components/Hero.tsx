@@ -88,6 +88,8 @@ const Hero = () => {
         
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           {/* Avatar Image */}
+
+          
           <div className="gsap-float" style={{ position: 'relative', width: '100%', maxWidth: '300px', aspectRatio: '1 / 1' }}>
             <div style={{ 
               position: 'absolute', 
