@@ -5,8 +5,8 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 const Hero = () => {
-  const container = useRef();
-  const glowRef = useRef();
+  const container = useRef<HTMLElement>(null);
+  const glowRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     // Initial entrance animations
@@ -28,6 +28,8 @@ const Hero = () => {
       ease: 'power1.inOut'
     });
 
+    if (!glowRef.current) return;
+
     // Purple mouse glow effect setup
     gsap.set(glowRef.current, { xPercent: -50, yPercent: -50 });
     
@@ -35,7 +37,7 @@ const Hero = () => {
     const xTo = gsap.quickTo(glowRef.current, "x", { duration: 0.8, ease: "power3" });
     const yTo = gsap.quickTo(glowRef.current, "y", { duration: 0.8, ease: "power3" });
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       xTo(e.clientX);
       yTo(e.clientY);
     };
@@ -75,7 +77,7 @@ const Hero = () => {
             {personalInfo.title.toUpperCase()}
           </h2>
           <p className="gsap-reveal" style={{ maxWidth: '600px', marginBottom: '2rem', color: '#ccc' }}>
-            DevOps Engineer with experience in cybersecurity, container orchestration, CI/CD, and cloud infrastructure. Passionate about building robust, secure, and scalable systems.
+            Full Stack Developer with a strong focus on backend engineering and DevOps, building scalable APIs, secure cloud infrastructure, container orchestration, and CI/CD pipelines. Comfortable across the stack, with solid frontend development experience to deliver complete, end-to-end products.
           </p>
           <div className="gsap-reveal" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
             <a href="#contact" className="btn">Get In Touch</a>

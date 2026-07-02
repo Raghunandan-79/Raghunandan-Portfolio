@@ -31,9 +31,18 @@ const Projects = () => {
                 <li key={i}>{point}</li>
               ))}
             </ul>
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn" style={{ marginTop: '20px', fontSize: '0.8rem', padding: '10px 20px' }}>
-              View Project
-            </a>
+            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginTop: '20px' }}>
+              {project.githubLink && (
+                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="btn" style={{ fontSize: '0.8rem', padding: '10px 20px', margin: 0 }}>
+                  GitHub
+                </a>
+              )}
+              {project.liveLink && (
+                <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#fff', color: '#000', fontSize: '0.8rem', padding: '10px 20px', margin: 0 }}>
+                  Live Link
+                </a>
+              )}
+            </div>
           </motion.div>
         ))}
       </div>
